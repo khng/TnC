@@ -1,0 +1,14 @@
+---
+resources:
+- name: repo
+  type: git
+  source:
+    uri: https://github.com/pivotal-kahin-ng/TnC.git
+    branch: ci
+
+jobs:
+- name: unit-tests
+  plan:  
+  - get: repo
+  - task: run-tests
+    file: repo/Concourse/run-tests.yml
