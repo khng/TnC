@@ -8,7 +8,26 @@ resources:
 
 jobs:
 - name: unit-tests
+  public: true
+  serial: true
   plan:  
   - get: repo
+    trigger: true
   - task: run-tests
-    file: repo/Concourse/run-tests.yml
+    file: repo/Concourse/run-test.yml
+
+- name: deploy
+  plan:
+  - get: repo
+  passed: [unit-tests]
+  - task: deploy
+    config:
+      platform: darwin
+      inputs:
+        - name: repo
+      run:
+        path: bash
+        args:
+          - -exc
+          - |
+            ruby repo/Concourse/provisioning.rb && fastlane build

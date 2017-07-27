@@ -5,8 +5,4 @@ inputs:
 - name: repo
 
 run:
-  path: bash
-  args:
-    - -exc
-    - |
-      xcodebuild test -workspace Test\ Project.xcworkspace -scheme Test\ Project -destination 'platform=iOS Simulator,OS=11.0,name=iPhone 7'
+  path: repo/Concourse/run-test.sh
