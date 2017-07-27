@@ -33,7 +33,6 @@ platform :ios do
       configuration: "Debug",
       scheme: "Test\ Project",
       clean: true,
-      codesigning_identity: "iPhone Distribution: GPVTL Canada Inc.",
       export_method: "enterprise",
       export_options: {
         provisioningProfiles: {

@@ -30,4 +30,4 @@ jobs:
         args:
           - -exc
           - |
-            ruby repo/Concourse/provisioning.rb && fastlane build
+            fastlane build
