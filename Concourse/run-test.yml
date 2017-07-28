@@ -5,4 +5,7 @@ inputs:
 - name: repo
 
 run:
-  path: chmod +x repo/Concourse/run-test.sh && repo/Concourse/run-test.sh
+  path: bash
+  args:
+    - "-c"
+    - "cd repo && ls -al" #&& chmod +x run-test.sh && repo/Concourse/run-test.sh
