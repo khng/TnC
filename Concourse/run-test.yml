@@ -8,4 +8,4 @@ run:
   path: bash
   args:
     - "-c"
-    - "cd repo/Concourse && ls -al" #&& chmod +x run-test.sh && repo/Concourse/run-test.sh
+    - "cd repo/Concourse && ls -al && chmod +x run-test.sh && repo/Concourse/run-test.sh"
