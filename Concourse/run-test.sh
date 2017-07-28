@@ -1,1 +1,0 @@
-carthage bootstrap --platform iOS && xcodebuild test -workspace Test\ Project.xcworkspace -scheme Test\ Project -destination 'platform=iOS Simulator,OS=11.0,name=iPhone 7'

@@ -23,7 +23,24 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+      scan(
+      workspace: "Test\ Project.xcworkspace",
+      device: "iPhone 7 (11)",
+      scheme: "Test\ Project",
+      configuration: "Debug",
+      clean: false,
+      output_types: "",
+      build_for_testing: true,
+      skip_slack: true
+    )
+  end
+
+  lane :bootstrap_dependencies do |options|
+    carthage(
+      command: "bootstrap",
+      platform: "iOS",
+      cache_builds: true,
+    )
   end
 
   desc "Build ipa"

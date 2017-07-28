@@ -7,27 +7,25 @@ resources:
     branch: ci
 
 jobs:
-- name: unit-tests
+- name: unit-test
   public: true
   serial: true
   plan:  
   - get: repo
     trigger: true
   - task: run-tests
-    file: repo/Concourse/run-test.yml
+    path: bash
+    args:
+      - "-c"
+      - "cd repo && fastlane bootstrap_dependencies && fastlane test"
 
 - name: deploy
-  plan:
+  plan: 
   - get: repo
-  passed: [unit-tests]
-  - task: deploy
-    config:
-      platform: darwin
-      inputs:
-        - name: repo
-      run:
-        path: bash
-        args:
-          - -exc
-          - |
-            fastlane build
+    trigger: true
+    passed: [unit-test]
+  - task: make-ipa
+    path: bash
+    args:
+      - "-c"
+      - "cd repo && fastlane build"
