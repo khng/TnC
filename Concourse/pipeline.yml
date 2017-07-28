@@ -14,10 +14,15 @@ jobs:
   - get: repo
     trigger: true
   - task: run-tests
-    path: bash
-    args:
-      - "-c"
-      - "cd repo && fastlane bootstrap_dependencies && fastlane test"
+    config: 
+      platform: darwin
+      inputs:
+         - name: repo
+      run:
+        path: bash
+        args:
+          - "-c"
+          - "bundle install && cd repo && fastlane bootstrap_dependencies && fastlane test"
 
 - name: deploy
   plan: 
@@ -25,7 +30,12 @@ jobs:
     trigger: true
     passed: [unit-test]
   - task: make-ipa
-    path: bash
-    args:
-      - "-c"
-      - "cd repo && fastlane build"
+    config: 
+      platform: darwin
+      inputs:
+         - name: repo
+      run:
+        path: bash
+        args:
+          - "-c"
+          - "bundle install && cd repo && fastlane build"
