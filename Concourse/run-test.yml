@@ -7,5 +7,5 @@ inputs:
 run:
   path: bash
   args:
-  	- "-c"
-	- "ls -al" #&& chmod +x run-test.sh && repo/Concourse/run-test.sh
+    - "-c"
+    - "ls -al" #&& chmod +x run-test.sh && repo/Concourse/run-test.sh
