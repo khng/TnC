@@ -6,6 +6,6 @@ inputs:
 
 run:
   path: bash
-  args: 
+  args:
   	- "-c"
 	- "ls -al" #&& chmod +x run-test.sh && repo/Concourse/run-test.sh
