@@ -22,7 +22,7 @@ jobs:
         path: bash
         args:
           - "-c"
-          - "bundle install && cd repo && fastlane bootstrap_dependencies && fastlane test"
+          - "bundle install && cd repo && bundle exec fastlane bootstrap_dependencies && bundle exec fastlane test"
 
 - name: deploy
   plan: 
@@ -38,4 +38,4 @@ jobs:
         path: bash
         args:
           - "-c"
-          - "bundle install && cd repo && fastlane build"
+          - "bundle install && cd repo && bundle exec fastlane build"

@@ -27,6 +27,7 @@ xcode-select --install
 <td width="33%"><code>sudo gem install fastlane -NV</code></td>
 </tr>
 </table>
+
 # Available Actions
 ## iOS
 ### ios test
@@ -34,6 +35,11 @@ xcode-select --install
 fastlane ios test
 ```
 Runs all the tests
+### ios bootstrap_dependencies
+```
+fastlane ios bootstrap_dependencies
+```
+
 ### ios build
 ```
 fastlane ios build
