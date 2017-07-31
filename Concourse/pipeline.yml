@@ -38,4 +38,4 @@ jobs:
         path: bash
         args:
           - "-c"
-          - "cd repo && export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin && bundle install && bundle exec fastlane build"
+          - "cd repo && export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin && bundle install && bundle exec fastlane bootstrap_dependencies && bundle exec fastlane build"

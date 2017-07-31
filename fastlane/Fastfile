@@ -24,12 +24,11 @@ platform :ios do
   lane :test do
       scan(
       project: "Test\ Project.xcodeproj",
-      device: "iPhone 7 (11)",
+      device: "iPhone 7 (11.0)",
       scheme: "Test\ Project",
       configuration: "Debug",
-      clean: false,
+      clean: true,
       output_types: "",
-      build_for_testing: true,
       skip_slack: true
     )
   end

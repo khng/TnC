@@ -14,23 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DDC25EA60A66A823AE329B4CD121C0A6"
-               BuildableName = "YelpAPI.framework"
-               BlueprintName = "YelpAPI"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+               BlueprintIdentifier = "AEA03AF31F0C2ACA004C74A1"
+               BuildableName = "Test Project.app"
+               BlueprintName = "Test Project"
+               ReferencedContainer = "container:Test Project.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AEA03AF31F0C2ACA004C74A1"
-               BuildableName = "Test Project.app"
-               BlueprintName = "Test Project"
+               BlueprintIdentifier = "AEA03B071F0C2ACB004C74A1"
+               BuildableName = "Test ProjectTests.xctest"
+               BlueprintName = "Test ProjectTests"
                ReferencedContainer = "container:Test Project.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
