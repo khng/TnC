@@ -23,7 +23,7 @@ platform :ios do
   desc "Runs all the tests"
   lane :test do
       scan(
-      workspace: "Test\ Project.xcworkspace",
+      workspace: "Test\ Project.xcodeproj",
       device: "iPhone 7 (11)",
       scheme: "Test\ Project",
       configuration: "Debug",
@@ -45,7 +45,7 @@ platform :ios do
   desc "Build ipa"
   lane :build do
       gym(
-      workspace: "Test\ Project.xcworkspace",
+      workspace: "Test\ Project.xcodeproj",
       configuration: "Debug",
       scheme: "Test\ Project",
       clean: true,
