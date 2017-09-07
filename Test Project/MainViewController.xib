@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,14 +25,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTi-Wc-1tb">
-                    <rect key="frame" x="0.0" y="26" width="375" height="0.0"/>
+                    <rect key="frame" x="0.0" y="26" width="375" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="1" green="0.0099468241871529806" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kO1-tc-ow5">
-                    <rect key="frame" x="87" y="466" width="201" height="33"/>
+                    <rect key="frame" x="87" y="449" width="201" height="44"/>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.65098039220000004" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="aLt-cZ-1RE"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                     <state key="normal" title="Go!">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,29 +68,24 @@
                         <action selector="selectSearchButton:" destination="-1" eventType="touchUpInside" id="s7q-9K-mqx"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-fb-VTQ">
-                    <rect key="frame" x="16" y="108" width="344" height="111"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MG7-fb-VTQ">
+                    <rect key="frame" x="16" y="107" width="344" height="111"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JN-ZM-Oag">
-                            <rect key="frame" x="0.0" y="0.0" width="344" height="111"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JN-ZM-Oag">
+                            <rect key="frame" x="169.5" y="0.0" width="5.5" height="30"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-my-lBw" customClass="RatingControl" customModule="Test_Project" customModuleProvider="target">
-                            <rect key="frame" x="57" y="111" width="230" height="0.0"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="71" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-my-lBw" customClass="RatingControl" customModule="Test_Project" customModuleProvider="target">
+                            <rect key="frame" x="172" y="40" width="0.0" height="71"/>
                         </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="2JN-ZM-Oag" secondAttribute="trailing" id="Uzh-ht-CUb"/>
-                        <constraint firstItem="ha9-my-lBw" firstAttribute="leading" secondItem="MG7-fb-VTQ" secondAttribute="leading" constant="57" id="hvi-FK-GJ1"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="dTi-Wc-1tb" secondAttribute="trailing" id="0zD-su-JMd"/>
                 <constraint firstAttribute="trailing" secondItem="kO1-tc-ow5" secondAttribute="trailing" constant="87" id="6xG-wv-qnb"/>
-                <constraint firstAttribute="bottom" secondItem="kO1-tc-ow5" secondAttribute="bottom" constant="168" id="75a-G3-hkc"/>
                 <constraint firstItem="MG7-fb-VTQ" firstAttribute="centerX" secondItem="dTi-Wc-1tb" secondAttribute="centerX" id="8y7-hd-gUw"/>
                 <constraint firstItem="dTi-Wc-1tb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="ME0-lg-ASa"/>
                 <constraint firstItem="kO1-tc-ow5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="87" id="P6h-gJ-L44"/>
@@ -95,8 +93,8 @@
                 <constraint firstItem="MG7-fb-VTQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="QIG-20-lXb"/>
                 <constraint firstItem="1df-de-f65" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RN2-Ge-8sP"/>
                 <constraint firstItem="dTi-Wc-1tb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xdc-ik-6s9"/>
-                <constraint firstItem="1df-de-f65" firstAttribute="top" secondItem="MG7-fb-VTQ" secondAttribute="bottom" constant="54" id="Zeo-EO-eDl"/>
-                <constraint firstItem="MG7-fb-VTQ" firstAttribute="top" secondItem="dTi-Wc-1tb" secondAttribute="bottom" constant="82" id="e7v-ls-0xv"/>
+                <constraint firstItem="kO1-tc-ow5" firstAttribute="top" secondItem="1df-de-f65" secondAttribute="bottom" constant="55" id="ZUA-RJ-UjK"/>
+                <constraint firstItem="1df-de-f65" firstAttribute="top" secondItem="MG7-fb-VTQ" secondAttribute="bottom" constant="55" id="Zeo-EO-eDl"/>
             </constraints>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>
